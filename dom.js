@@ -1,25 +1,36 @@
-//function test(){
- //alert("Greetings!")
-//}
-
-//test();
-
-let dark = false;
+let dark = 0
 
 let myButton = document.querySelector("Button")
 
 let texty = document.getElementById('message')
 
-// function handleClick(){
-  //  alert("Button :o")
-// }
-
-// myButton.addEventListener('click', handleClick)
-
-function darkMode(){
- document.body.style.backgroundColor = "rgb(0,0,0)"
- texty.style.color = "rgb(225,225,225)"
- dark = true;
+ function darkMode() {
+    document.body.style.backgroundColor = 'rgb(0,0,0)'
+    texty.style.color = 'rgb(225,225,225)'
+    myButton.innerHTML = "Light Mode"
 }
 
-myButton.addEventListener('click', darkMode)
+ function lightMode(){
+    document.body.style.backgroundColor = "rgb(225,225,225)"
+    texty.style.color = "rgb(0,0,0)"
+    myButton.innerHTML = "Dark Mode"
+}
+        
+function checkLight() {
+   
+
+    if (dark === 0) {
+        darkMode();
+        //alert("DARK")
+        dark = 1
+    } 
+    
+    else {
+        lightMode();
+        //alert("LIGHT")
+        dark = 0
+    }
+}
+
+
+myButton.addEventListener('click', checkLight)
