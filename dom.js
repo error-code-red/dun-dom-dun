@@ -1,23 +1,25 @@
-function test(){
- alert("Greetings!")
-}
+//function test(){
+ //alert("Greetings!")
+//}
 
-test();
+//test();
 
 let dark = false;
 
 let myButton = document.querySelector("Button")
 
-function handleClick(){
-    alert("Button :o")
-}
+let texty = document.getElementById('message')
 
-myButton.addEventListener('click',handleClick)
+// function handleClick(){
+  //  alert("Button :o")
+// }
+
+// myButton.addEventListener('click', handleClick)
 
 function darkMode(){
  document.body.style.backgroundColor = "rgb(0,0,0)"
- document.querySelector("#texty").
- dark = true;gi
+ texty.style.color = "rgb(225,225,225)"
+ dark = true;
 }
 
 myButton.addEventListener('click', darkMode)
